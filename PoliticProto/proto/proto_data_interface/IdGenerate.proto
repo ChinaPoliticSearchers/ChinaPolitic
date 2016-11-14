@@ -1,10 +1,10 @@
-syntax = " proto2";
-import "./BasicDataManage.proto";
+syntax = "proto2";
+import "BasicDataManage.proto";
 
 message GenerateIdResponse{
-   required   boolean success=1;
+   required   bool success=1;
    required   int64 id=2;
-   optional   boolean exists=3;
+   optional   bool exists=3;
 }
 
 service Id_Generate

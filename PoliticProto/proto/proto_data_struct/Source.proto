@@ -1,6 +1,6 @@
 syntax = "proto2";
 
 message Source{
-   repeated string links=0;
+   repeated string links=1;
 }
 

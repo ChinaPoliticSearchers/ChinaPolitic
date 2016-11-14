@@ -4,7 +4,7 @@ from threading import Thread
 
 import grpc
 import time
-from concurrent import futures
+
 
 from data_proxy.mysql.mysql_proxy import BasicDataManage
 from proto_data_interface_py import BasicDataManage_pb2

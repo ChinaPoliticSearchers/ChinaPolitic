@@ -12,7 +12,7 @@ fi
 
 for file in `ls $STRUCT_SRC_DIR|grep proto`
 do
-   protoc -I=$STRUCT_SRC_DIR --python_out=$STRUCT_OUTPUT_DIR $STRUCT_SRC_DIR/$file
+      python -m grpc.tools.protoc -I=$STRUCT_SRC_DIR --python_out=$STRUCT_OUTPUT_DIR $STRUCT_SRC_DIR/$file
 done
 
 if [ ! -f $BASIC_DATA_INTERFACE_OUTPUT ]; then

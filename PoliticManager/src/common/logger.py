@@ -2,4 +2,6 @@
 
 
 
-from logging import logger
+from logging import Logger
+
+
