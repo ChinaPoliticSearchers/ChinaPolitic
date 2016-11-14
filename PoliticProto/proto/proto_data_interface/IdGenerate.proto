@@ -1,0 +1,14 @@
+syntax = " proto2";
+import "./BasicDataManage.proto";
+
+message GenerateIdResponse{
+   required   boolean success=1;
+   required   int64 id=2;
+   optional   boolean exists=3;
+}
+
+service Id_Generate
+{
+   rpc GenerateId(InsertData) returns (GenerateIdResponse);
+}
+

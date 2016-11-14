@@ -1,0 +1,17 @@
+syntax = "proto2";
+
+message Duration{
+    required int64 begin_date=1;
+    required int64 end_date=2;
+}
+
+
+message JobTitle
+{
+    required  int64 job_id = 1;
+    repeated string job_name=2;
+    map<int64,Duration> served=3;
+    required int64 organzation_id=4;
+    repeated int64 events_id=5;
+    repeated int64 judges_id=6;
+}

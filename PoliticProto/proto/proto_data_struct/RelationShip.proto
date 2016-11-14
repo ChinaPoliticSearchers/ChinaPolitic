@@ -1,0 +1,30 @@
+syntax = "proto2";
+
+
+message RelationShip{
+    enum RelationShipType{
+        OtherRel=0;
+        DirectRelative=1;
+        BussinessRel=2;
+        ClassMateRel=3;
+        ComradeRel=4;
+        ColleagueRel=5;
+    }
+
+        enum Role {
+            Other=0;
+        Parents=1;
+        Children=2;
+        Officials=3;
+        BussinessMan=4;
+        ClassMate=5;
+        Comradeship=6;
+        Colleague=7;
+        Secretary=8;
+    }
+
+    required RelationShipType type=1;
+    map<int64 , Role> roles=2;
+    repeated  int64 event_id=3;
+    repeated  int64 origins_id=4;
+}

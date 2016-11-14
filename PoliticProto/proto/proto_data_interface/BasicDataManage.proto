@@ -1,0 +1,65 @@
+syntax = "proto2";
+message Error{
+    enum Level{
+        DEBUG=0;
+        INFO=1;
+        WARN=2;
+        ERROR=3;
+    }
+    required string error=1;
+    optional string stack=2;
+    optional  string  env=3;
+    required  Level level=4;
+}
+
+enum DATATYPE{
+    BOOLEAN=0;
+    INT=1;
+    DOUBLE=2;
+    FLOAT=3;
+    LONG=4;
+    STRING=5;
+    BYTE=6;
+}
+
+
+message DataResponse{
+    required  bool success=1;
+    optional  Error error=3;
+    required  string response_type_name=2;
+    repeated  bytes response_byte=4;
+}
+
+enum InsertOptional{
+    auto_increment=0;
+    override=1;
+}
+
+message InsertData{
+    required  string           insert_type_name=1;
+    required  bytes            insert_bytes=2;
+    repeated  InsertOptional    insert_optionals=3;
+}
+
+message QueryData{
+    required   string  query_type_name=1;
+    required   int64   limit=2;
+    repeated   string  keys=3;
+    required   bytes   query_bytes=4;
+}
+
+
+message UpdateData{
+    required QueryData data=1;
+    required string update_key=2;
+    required bytes update_values=3;
+    required DATATYPE type=4;
+}
+
+service DataService{
+    rpc Insert(InsertData) returns (DataResponse);
+    rpc Query(QueryData) returns (DataResponse);
+    rpc Delete(QueryData) returns (DataResponse);
+    rpc Update(UpdateData) returns (DataResponse);
+}
+

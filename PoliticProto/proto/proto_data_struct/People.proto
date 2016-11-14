@@ -1,0 +1,48 @@
+syntax = "proto2";
+
+
+message CharacterInformation
+{
+     required string nativeplace=1;
+     required string ancestral_home=2;
+     required string diploma=3;
+     required  Nation nation=4;
+     required  Sex    sex=5;
+    enum Nation{
+        Han=0;
+        Hui=1;
+    }
+
+    enum Sex{
+        Male=1;
+        FeMale=2;
+        Unknonw=3;
+        Undefine=4;
+    }
+    repeated  string  nicknames=6;
+    repeated Religion religion=7;
+    enum Religion{
+        Christianity =0;
+        Islam=1;
+        Irreligion=2; //无神论
+        Hinduism=3;
+        Buddhism=4;
+        Other_religions=5;
+    }
+}
+
+message People
+{
+   required int64  people_id=1;
+   required string name=2;
+   required  CharacterInformation information=3;
+   repeated int64  events_id=4;
+   repeated int64  blood_relationships_id=5;
+   repeated int64  relationship_id=6;
+   repeated int64  organzations_id=7;
+   repeated int64  judges_id=8;
+   repeated int64  job_titles_id=9;
+   repeated int64  politic_trends_id=10;
+}
+
+
