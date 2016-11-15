@@ -1,0 +1,5 @@
+.idea/
+.virtualenv/
+mac_env/*
+*.pyc
+
