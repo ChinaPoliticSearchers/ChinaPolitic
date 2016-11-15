@@ -9,4 +9,4 @@ class MongoDataManage(BasicDataManage):
         self.mongo_client = MongoClient('localhost', 27017)
 
     def save_detail(self, type_name, to_save_object, insert_optionals):
-        pass
+        print("pretended to invoke")
