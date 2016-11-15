@@ -13,55 +13,19 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
+import Common_pb2 as Common__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='JobTitle.proto',
   package='',
   syntax='proto2',
-  serialized_pb=_b('\n\x0eJobTitle.proto\"0\n\x08\x44uration\x12\x12\n\nbegin_date\x18\x01 \x02(\x03\x12\x10\n\x08\x65nd_date\x18\x02 \x02(\x03\"\xcb\x01\n\x08JobTitle\x12\x0e\n\x06job_id\x18\x01 \x02(\x03\x12\x10\n\x08job_name\x18\x02 \x03(\t\x12%\n\x06served\x18\x03 \x03(\x0b\x32\x15.JobTitle.ServedEntry\x12\x16\n\x0eorganzation_id\x18\x04 \x02(\x03\x12\x11\n\tevents_id\x18\x05 \x03(\x03\x12\x11\n\tjudges_id\x18\x06 \x03(\x03\x1a\x38\n\x0bServedEntry\x12\x0b\n\x03key\x18\x01 \x01(\x03\x12\x18\n\x05value\x18\x02 \x01(\x0b\x32\t.Duration:\x02\x38\x01')
-)
+  serialized_pb=_b('\n\x0eJobTitle.proto\x1a\x0c\x43ommon.proto\"\xcb\x01\n\x08JobTitle\x12\x0e\n\x06job_id\x18\x01 \x02(\x03\x12\x10\n\x08job_name\x18\x02 \x03(\t\x12%\n\x06served\x18\x03 \x03(\x0b\x32\x15.JobTitle.ServedEntry\x12\x16\n\x0eorganzation_id\x18\x04 \x02(\x03\x12\x11\n\tevents_id\x18\x05 \x03(\x03\x12\x11\n\tjudges_id\x18\x06 \x03(\x03\x1a\x38\n\x0bServedEntry\x12\x0b\n\x03key\x18\x01 \x01(\x03\x12\x18\n\x05value\x18\x02 \x01(\x0b\x32\t.Duration:\x02\x38\x01')
+  ,
+  dependencies=[Common__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
-
-
-_DURATION = _descriptor.Descriptor(
-  name='Duration',
-  full_name='Duration',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='begin_date', full_name='Duration.begin_date', index=0,
-      number=1, type=3, cpp_type=2, label=2,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='end_date', full_name='Duration.end_date', index=1,
-      number=2, type=3, cpp_type=2, label=2,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=18,
-  serialized_end=66,
-)
 
 
 _JOBTITLE_SERVEDENTRY = _descriptor.Descriptor(
@@ -97,8 +61,8 @@ _JOBTITLE_SERVEDENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=216,
-  serialized_end=272,
+  serialized_start=180,
+  serialized_end=236,
 )
 
 _JOBTITLE = _descriptor.Descriptor(
@@ -162,22 +126,14 @@ _JOBTITLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=69,
-  serialized_end=272,
+  serialized_start=33,
+  serialized_end=236,
 )
 
-_JOBTITLE_SERVEDENTRY.fields_by_name['value'].message_type = _DURATION
+_JOBTITLE_SERVEDENTRY.fields_by_name['value'].message_type = Common__pb2._DURATION
 _JOBTITLE_SERVEDENTRY.containing_type = _JOBTITLE
 _JOBTITLE.fields_by_name['served'].message_type = _JOBTITLE_SERVEDENTRY
-DESCRIPTOR.message_types_by_name['Duration'] = _DURATION
 DESCRIPTOR.message_types_by_name['JobTitle'] = _JOBTITLE
-
-Duration = _reflection.GeneratedProtocolMessageType('Duration', (_message.Message,), dict(
-  DESCRIPTOR = _DURATION,
-  __module__ = 'JobTitle_pb2'
-  # @@protoc_insertion_point(class_scope:Duration)
-  ))
-_sym_db.RegisterMessage(Duration)
 
 JobTitle = _reflection.GeneratedProtocolMessageType('JobTitle', (_message.Message,), dict(
 

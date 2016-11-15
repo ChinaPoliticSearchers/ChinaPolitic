@@ -1,0 +1,6 @@
+protobuf
+grpc
+scrapy
+grpcio
+grpcio-tools
+pyMongo

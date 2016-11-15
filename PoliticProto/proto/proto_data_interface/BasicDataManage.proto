@@ -1,12 +1,14 @@
 syntax = "proto2";
-message Error{
-    enum Level{
+enum Level{
         DEBUG=0;
         INFO=1;
         WARN=2;
         ERROR=3;
-    }
-    required string error=1;
+        FATAL=4;
+}
+
+message Error{
+    required string message=1;
     optional string stack=2;
     optional  string  env=3;
     required  Level level=4;

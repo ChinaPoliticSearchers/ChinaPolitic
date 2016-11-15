@@ -1,11 +1,5 @@
 syntax = "proto2";
 
-
-message Duration{
-    required int64 begin_date=1;
-    required int64 end_date=2;
-}
-
 message Event{
     required int64   event_id=1;
     repeated int64   peoples_id=2;

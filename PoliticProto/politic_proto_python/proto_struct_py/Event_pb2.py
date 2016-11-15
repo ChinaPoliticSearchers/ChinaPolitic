@@ -19,49 +19,11 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='Event.proto',
   package='',
   syntax='proto2',
-  serialized_pb=_b('\n\x0b\x45vent.proto\"0\n\x08\x44uration\x12\x12\n\nbegin_date\x18\x01 \x02(\x03\x12\x10\n\x08\x65nd_date\x18\x02 \x02(\x03\"m\n\x05\x45vent\x12\x10\n\x08\x65vent_id\x18\x01 \x02(\x03\x12\x12\n\npeoples_id\x18\x02 \x03(\x03\x12\x17\n\x0forganzations_id\x18\x03 \x03(\x03\x12\x12\n\nevent_name\x18\x04 \x02(\t\x12\x11\n\tjudges_id\x18\x05 \x03(\t')
+  serialized_pb=_b('\n\x0b\x45vent.proto\"m\n\x05\x45vent\x12\x10\n\x08\x65vent_id\x18\x01 \x02(\x03\x12\x12\n\npeoples_id\x18\x02 \x03(\x03\x12\x17\n\x0forganzations_id\x18\x03 \x03(\x03\x12\x12\n\nevent_name\x18\x04 \x02(\t\x12\x11\n\tjudges_id\x18\x05 \x03(\t')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
-
-
-_DURATION = _descriptor.Descriptor(
-  name='Duration',
-  full_name='Duration',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='begin_date', full_name='Duration.begin_date', index=0,
-      number=1, type=3, cpp_type=2, label=2,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='end_date', full_name='Duration.end_date', index=1,
-      number=2, type=3, cpp_type=2, label=2,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=15,
-  serialized_end=63,
-)
 
 
 _EVENT = _descriptor.Descriptor(
@@ -118,19 +80,11 @@ _EVENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=65,
-  serialized_end=174,
+  serialized_start=15,
+  serialized_end=124,
 )
 
-DESCRIPTOR.message_types_by_name['Duration'] = _DURATION
 DESCRIPTOR.message_types_by_name['Event'] = _EVENT
-
-Duration = _reflection.GeneratedProtocolMessageType('Duration', (_message.Message,), dict(
-  DESCRIPTOR = _DURATION,
-  __module__ = 'Event_pb2'
-  # @@protoc_insertion_point(class_scope:Duration)
-  ))
-_sym_db.RegisterMessage(Duration)
 
 Event = _reflection.GeneratedProtocolMessageType('Event', (_message.Message,), dict(
   DESCRIPTOR = _EVENT,

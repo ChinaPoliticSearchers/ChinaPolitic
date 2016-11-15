@@ -1,0 +1,6 @@
+syntax = "proto2";
+
+message Duration{
+    required int64 begin_date=1;
+    required int64 end_date=2;
+}

@@ -20,10 +20,41 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='BasicDataManage.proto',
   package='',
   syntax='proto2',
-  serialized_pb=_b('\n\x15\x42\x61sicDataManage.proto\"\x82\x01\n\x05\x45rror\x12\r\n\x05\x65rror\x18\x01 \x02(\t\x12\r\n\x05stack\x18\x02 \x01(\t\x12\x0b\n\x03\x65nv\x18\x03 \x01(\t\x12\x1b\n\x05level\x18\x04 \x02(\x0e\x32\x0c.Error.Level\"1\n\x05Level\x12\t\n\x05\x44\x45\x42UG\x10\x00\x12\x08\n\x04INFO\x10\x01\x12\x08\n\x04WARN\x10\x02\x12\t\n\x05\x45RROR\x10\x03\"i\n\x0c\x44\x61taResponse\x12\x0f\n\x07success\x18\x01 \x02(\x08\x12\x15\n\x05\x65rror\x18\x03 \x01(\x0b\x32\x06.Error\x12\x1a\n\x12response_type_name\x18\x02 \x02(\t\x12\x15\n\rresponse_byte\x18\x04 \x03(\x0c\"g\n\nInsertData\x12\x18\n\x10insert_type_name\x18\x01 \x02(\t\x12\x14\n\x0cinsert_bytes\x18\x02 \x02(\x0c\x12)\n\x10insert_optionals\x18\x03 \x03(\x0e\x32\x0f.InsertOptional\"V\n\tQueryData\x12\x17\n\x0fquery_type_name\x18\x01 \x02(\t\x12\r\n\x05limit\x18\x02 \x02(\x03\x12\x0c\n\x04keys\x18\x03 \x03(\t\x12\x13\n\x0bquery_bytes\x18\x04 \x02(\x0c\"j\n\nUpdateData\x12\x18\n\x04\x64\x61ta\x18\x01 \x02(\x0b\x32\n.QueryData\x12\x12\n\nupdate_key\x18\x02 \x02(\t\x12\x15\n\rupdate_values\x18\x03 \x02(\x0c\x12\x17\n\x04type\x18\x04 \x02(\x0e\x32\t.DATATYPE*W\n\x08\x44\x41TATYPE\x12\x0b\n\x07\x42OOLEAN\x10\x00\x12\x07\n\x03INT\x10\x01\x12\n\n\x06\x44OUBLE\x10\x02\x12\t\n\x05\x46LOAT\x10\x03\x12\x08\n\x04LONG\x10\x04\x12\n\n\x06STRING\x10\x05\x12\x08\n\x04\x42YTE\x10\x06*2\n\x0eInsertOptional\x12\x12\n\x0e\x61uto_increment\x10\x00\x12\x0c\n\x08override\x10\x01\x32\xa2\x01\n\x0b\x44\x61taService\x12$\n\x06Insert\x12\x0b.InsertData\x1a\r.DataResponse\x12\"\n\x05Query\x12\n.QueryData\x1a\r.DataResponse\x12#\n\x06\x44\x65lete\x12\n.QueryData\x1a\r.DataResponse\x12$\n\x06Update\x12\x0b.UpdateData\x1a\r.DataResponse')
+  serialized_pb=_b('\n\x15\x42\x61sicDataManage.proto\"K\n\x05\x45rror\x12\x0f\n\x07message\x18\x01 \x02(\t\x12\r\n\x05stack\x18\x02 \x01(\t\x12\x0b\n\x03\x65nv\x18\x03 \x01(\t\x12\x15\n\x05level\x18\x04 \x02(\x0e\x32\x06.Level\"i\n\x0c\x44\x61taResponse\x12\x0f\n\x07success\x18\x01 \x02(\x08\x12\x15\n\x05\x65rror\x18\x03 \x01(\x0b\x32\x06.Error\x12\x1a\n\x12response_type_name\x18\x02 \x02(\t\x12\x15\n\rresponse_byte\x18\x04 \x03(\x0c\"g\n\nInsertData\x12\x18\n\x10insert_type_name\x18\x01 \x02(\t\x12\x14\n\x0cinsert_bytes\x18\x02 \x02(\x0c\x12)\n\x10insert_optionals\x18\x03 \x03(\x0e\x32\x0f.InsertOptional\"V\n\tQueryData\x12\x17\n\x0fquery_type_name\x18\x01 \x02(\t\x12\r\n\x05limit\x18\x02 \x02(\x03\x12\x0c\n\x04keys\x18\x03 \x03(\t\x12\x13\n\x0bquery_bytes\x18\x04 \x02(\x0c\"j\n\nUpdateData\x12\x18\n\x04\x64\x61ta\x18\x01 \x02(\x0b\x32\n.QueryData\x12\x12\n\nupdate_key\x18\x02 \x02(\t\x12\x15\n\rupdate_values\x18\x03 \x02(\x0c\x12\x17\n\x04type\x18\x04 \x02(\x0e\x32\t.DATATYPE*1\n\x05Level\x12\t\n\x05\x44\x45\x42UG\x10\x00\x12\x08\n\x04INFO\x10\x01\x12\x08\n\x04WARN\x10\x02\x12\t\n\x05\x45RROR\x10\x03*W\n\x08\x44\x41TATYPE\x12\x0b\n\x07\x42OOLEAN\x10\x00\x12\x07\n\x03INT\x10\x01\x12\n\n\x06\x44OUBLE\x10\x02\x12\t\n\x05\x46LOAT\x10\x03\x12\x08\n\x04LONG\x10\x04\x12\n\n\x06STRING\x10\x05\x12\x08\n\x04\x42YTE\x10\x06*2\n\x0eInsertOptional\x12\x12\n\x0e\x61uto_increment\x10\x00\x12\x0c\n\x08override\x10\x01\x32\xa2\x01\n\x0b\x44\x61taService\x12$\n\x06Insert\x12\x0b.InsertData\x1a\r.DataResponse\x12\"\n\x05Query\x12\n.QueryData\x1a\r.DataResponse\x12#\n\x06\x44\x65lete\x12\n.QueryData\x1a\r.DataResponse\x12$\n\x06Update\x12\x0b.UpdateData\x1a\r.DataResponse')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
+_LEVEL = _descriptor.EnumDescriptor(
+  name='Level',
+  full_name='Level',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='DEBUG', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='INFO', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='WARN', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR', index=3, number=3,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=510,
+  serialized_end=559,
+)
+_sym_db.RegisterEnumDescriptor(_LEVEL)
+
+Level = enum_type_wrapper.EnumTypeWrapper(_LEVEL)
 _DATATYPE = _descriptor.EnumDescriptor(
   name='DATATYPE',
   full_name='DATATYPE',
@@ -61,8 +92,8 @@ _DATATYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=566,
-  serialized_end=653,
+  serialized_start=561,
+  serialized_end=648,
 )
 _sym_db.RegisterEnumDescriptor(_DATATYPE)
 
@@ -84,12 +115,16 @@ _INSERTOPTIONAL = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=655,
-  serialized_end=705,
+  serialized_start=650,
+  serialized_end=700,
 )
 _sym_db.RegisterEnumDescriptor(_INSERTOPTIONAL)
 
 InsertOptional = enum_type_wrapper.EnumTypeWrapper(_INSERTOPTIONAL)
+DEBUG = 0
+INFO = 1
+WARN = 2
+ERROR = 3
 BOOLEAN = 0
 INT = 1
 DOUBLE = 2
@@ -101,36 +136,6 @@ auto_increment = 0
 override = 1
 
 
-_ERROR_LEVEL = _descriptor.EnumDescriptor(
-  name='Level',
-  full_name='Error.Level',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='DEBUG', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='INFO', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='WARN', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR', index=3, number=3,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=107,
-  serialized_end=156,
-)
-_sym_db.RegisterEnumDescriptor(_ERROR_LEVEL)
-
 
 _ERROR = _descriptor.Descriptor(
   name='Error',
@@ -140,7 +145,7 @@ _ERROR = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='error', full_name='Error.error', index=0,
+      name='message', full_name='Error.message', index=0,
       number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -172,7 +177,6 @@ _ERROR = _descriptor.Descriptor(
   ],
   nested_types=[],
   enum_types=[
-    _ERROR_LEVEL,
   ],
   options=None,
   is_extendable=False,
@@ -180,8 +184,8 @@ _ERROR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=26,
-  serialized_end=156,
+  serialized_start=25,
+  serialized_end=100,
 )
 
 
@@ -232,8 +236,8 @@ _DATARESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=158,
-  serialized_end=263,
+  serialized_start=102,
+  serialized_end=207,
 )
 
 
@@ -277,8 +281,8 @@ _INSERTDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=265,
-  serialized_end=368,
+  serialized_start=209,
+  serialized_end=312,
 )
 
 
@@ -329,8 +333,8 @@ _QUERYDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=370,
-  serialized_end=456,
+  serialized_start=314,
+  serialized_end=400,
 )
 
 
@@ -381,12 +385,11 @@ _UPDATEDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=458,
-  serialized_end=564,
+  serialized_start=402,
+  serialized_end=508,
 )
 
-_ERROR.fields_by_name['level'].enum_type = _ERROR_LEVEL
-_ERROR_LEVEL.containing_type = _ERROR
+_ERROR.fields_by_name['level'].enum_type = _LEVEL
 _DATARESPONSE.fields_by_name['error'].message_type = _ERROR
 _INSERTDATA.fields_by_name['insert_optionals'].enum_type = _INSERTOPTIONAL
 _UPDATEDATA.fields_by_name['data'].message_type = _QUERYDATA
@@ -396,6 +399,7 @@ DESCRIPTOR.message_types_by_name['DataResponse'] = _DATARESPONSE
 DESCRIPTOR.message_types_by_name['InsertData'] = _INSERTDATA
 DESCRIPTOR.message_types_by_name['QueryData'] = _QUERYDATA
 DESCRIPTOR.message_types_by_name['UpdateData'] = _UPDATEDATA
+DESCRIPTOR.enum_types_by_name['Level'] = _LEVEL
 DESCRIPTOR.enum_types_by_name['DATATYPE'] = _DATATYPE
 DESCRIPTOR.enum_types_by_name['InsertOptional'] = _INSERTOPTIONAL
 
