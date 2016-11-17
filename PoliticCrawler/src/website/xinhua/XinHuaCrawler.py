@@ -12,7 +12,7 @@ class XinHuaSpider(scrapy.Spider):
     ]
 
     ITEM_PIPELINES = [
-        'framework.data_pipeline.StructPipeline',
+        'framework.data_pipeline.DataManagePipeline',
     ]
 
     DOWNLOADER_MIDDLEWARES = {
@@ -21,7 +21,6 @@ class XinHuaSpider(scrapy.Spider):
 
     def parse(self, response):
         text = response.xpath('//p/text()').extract()
-        print(text)
         return None
 
 

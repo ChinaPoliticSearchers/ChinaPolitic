@@ -1,7 +1,7 @@
 # coding=utf-8
 # do bytes dynamic
-from proto_data_interface_py.BasicDataManage_pb2 import InsertData, DataServiceServicer, DataResponse, Error, Level
-from common.reflection_tools import is_data_name_acceptable, get_instant_object
+from common_tools.reflection.reflection_tools import is_data_name_acceptable, get_instant_object
+from proto_data_interface_py.BasicDataManage_pb2 import InsertData, DataResponse, Error, Level, DataServiceServicer
 from google.protobuf.json_format import MessageToJson
 from logging import Logger
 import abc
@@ -36,7 +36,6 @@ class BasicDataManage(DataServiceServicer):
                                              error=Error(message=message, level=Level.Value("ERROR")))
                 return data_response
 
-
     def Update(self, UpdateData, context):
         pass
 
@@ -49,4 +48,3 @@ class BasicDataManage(DataServiceServicer):
     @abc.abstractmethod
     def save_detail(self, type_name, to_save_object, insert_optionals):
         pass
-

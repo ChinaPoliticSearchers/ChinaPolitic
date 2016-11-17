@@ -1,11 +1,12 @@
 syntax = "proto2";
 
 message Event{
-    required int64   event_id=1;
-    repeated int64   peoples_id=2;
-    repeated int64   organzations_id=3;
+    required string   event_id=1;
+    repeated string   peoples_id=2;
+    repeated string   organzations_id=3;
     required string  event_name=4;
-    repeated string  judges_id=5;
+    repeated string  other_names=5;
+    repeated string  judges_id=6;
 }
 
 

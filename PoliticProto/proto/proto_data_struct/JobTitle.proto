@@ -4,10 +4,10 @@ import 'Common.proto';
 
 message JobTitle
 {
-    required  int64 job_id = 1;
+    required  string job_id = 1;
     repeated string job_name=2;
-    map<int64,Duration> served=3;
-    required int64 organzation_id=4;
-    repeated int64 events_id=5;
-    repeated int64 judges_id=6;
+    map<string,Duration> served=3;
+    required string organzation_id=4;
+    repeated string events_id=5;
+    repeated string judges_id=6;
 }

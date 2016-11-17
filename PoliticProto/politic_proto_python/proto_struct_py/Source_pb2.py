@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='Source.proto',
   package='',
   syntax='proto2',
-  serialized_pb=_b('\n\x0cSource.proto\"\x17\n\x06Source\x12\r\n\x05links\x18\x01 \x03(\t')
+  serialized_pb=_b('\n\x0cSource.proto\"H\n\x06Source\x12\r\n\x05links\x18\x01 \x03(\t\x12\x17\n\x0forganization_id\x18\x02 \x02(\t\x12\x16\n\x0e\x63onnections_id\x18\x03 \x03(\t')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -40,6 +40,20 @@ _SOURCE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='organization_id', full_name='Source.organization_id', index=1,
+      number=2, type=9, cpp_type=9, label=2,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='connections_id', full_name='Source.connections_id', index=2,
+      number=3, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -53,7 +67,7 @@ _SOURCE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=16,
-  serialized_end=39,
+  serialized_end=88,
 )
 
 DESCRIPTOR.message_types_by_name['Source'] = _SOURCE

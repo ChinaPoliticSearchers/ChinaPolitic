@@ -1,0 +1,21 @@
+syntax = "proto2";
+message GenerateIdRequest{
+    required  string generateIdType=1;
+    required  string generateTypeObject=2;
+    required  string source=3;
+    required  string links=4;
+
+}
+
+message GenerateIdResponse{
+   required   bool success=1;
+   required   int64 id=2;
+   optional   bool exists=3;
+}
+
+service Id_Generate
+{
+   rpc GenerateId(GenerateIdRequest) returns (GenerateIdResponse);
+}
+
+

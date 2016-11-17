@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='JobTitle.proto',
   package='',
   syntax='proto2',
-  serialized_pb=_b('\n\x0eJobTitle.proto\x1a\x0c\x43ommon.proto\"\xcb\x01\n\x08JobTitle\x12\x0e\n\x06job_id\x18\x01 \x02(\x03\x12\x10\n\x08job_name\x18\x02 \x03(\t\x12%\n\x06served\x18\x03 \x03(\x0b\x32\x15.JobTitle.ServedEntry\x12\x16\n\x0eorganzation_id\x18\x04 \x02(\x03\x12\x11\n\tevents_id\x18\x05 \x03(\x03\x12\x11\n\tjudges_id\x18\x06 \x03(\x03\x1a\x38\n\x0bServedEntry\x12\x0b\n\x03key\x18\x01 \x01(\x03\x12\x18\n\x05value\x18\x02 \x01(\x0b\x32\t.Duration:\x02\x38\x01')
+  serialized_pb=_b('\n\x0eJobTitle.proto\x1a\x0c\x43ommon.proto\"\xcb\x01\n\x08JobTitle\x12\x0e\n\x06job_id\x18\x01 \x02(\t\x12\x10\n\x08job_name\x18\x02 \x03(\t\x12%\n\x06served\x18\x03 \x03(\x0b\x32\x15.JobTitle.ServedEntry\x12\x16\n\x0eorganzation_id\x18\x04 \x02(\t\x12\x11\n\tevents_id\x18\x05 \x03(\t\x12\x11\n\tjudges_id\x18\x06 \x03(\t\x1a\x38\n\x0bServedEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x18\n\x05value\x18\x02 \x01(\x0b\x32\t.Duration:\x02\x38\x01')
   ,
   dependencies=[Common__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -37,8 +37,8 @@ _JOBTITLE_SERVEDENTRY = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='key', full_name='JobTitle.ServedEntry.key', index=0,
-      number=1, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -74,8 +74,8 @@ _JOBTITLE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='job_id', full_name='JobTitle.job_id', index=0,
-      number=1, type=3, cpp_type=2, label=2,
-      has_default_value=False, default_value=0,
+      number=1, type=9, cpp_type=9, label=2,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -95,21 +95,21 @@ _JOBTITLE = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='organzation_id', full_name='JobTitle.organzation_id', index=3,
-      number=4, type=3, cpp_type=2, label=2,
-      has_default_value=False, default_value=0,
+      number=4, type=9, cpp_type=9, label=2,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='events_id', full_name='JobTitle.events_id', index=4,
-      number=5, type=3, cpp_type=2, label=3,
+      number=5, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='judges_id', full_name='JobTitle.judges_id', index=5,
-      number=6, type=3, cpp_type=2, label=3,
+      number=6, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,

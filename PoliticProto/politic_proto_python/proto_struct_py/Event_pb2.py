@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='Event.proto',
   package='',
   syntax='proto2',
-  serialized_pb=_b('\n\x0b\x45vent.proto\"m\n\x05\x45vent\x12\x10\n\x08\x65vent_id\x18\x01 \x02(\x03\x12\x12\n\npeoples_id\x18\x02 \x03(\x03\x12\x17\n\x0forganzations_id\x18\x03 \x03(\x03\x12\x12\n\nevent_name\x18\x04 \x02(\t\x12\x11\n\tjudges_id\x18\x05 \x03(\t')
+  serialized_pb=_b('\n\x0b\x45vent.proto\"\x82\x01\n\x05\x45vent\x12\x10\n\x08\x65vent_id\x18\x01 \x02(\t\x12\x12\n\npeoples_id\x18\x02 \x03(\t\x12\x17\n\x0forganzations_id\x18\x03 \x03(\t\x12\x12\n\nevent_name\x18\x04 \x02(\t\x12\x13\n\x0bother_names\x18\x05 \x03(\t\x12\x11\n\tjudges_id\x18\x06 \x03(\t')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -35,21 +35,21 @@ _EVENT = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='event_id', full_name='Event.event_id', index=0,
-      number=1, type=3, cpp_type=2, label=2,
-      has_default_value=False, default_value=0,
+      number=1, type=9, cpp_type=9, label=2,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='peoples_id', full_name='Event.peoples_id', index=1,
-      number=2, type=3, cpp_type=2, label=3,
+      number=2, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='organzations_id', full_name='Event.organzations_id', index=2,
-      number=3, type=3, cpp_type=2, label=3,
+      number=3, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -62,8 +62,15 @@ _EVENT = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='judges_id', full_name='Event.judges_id', index=4,
+      name='other_names', full_name='Event.other_names', index=4,
       number=5, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='judges_id', full_name='Event.judges_id', index=5,
+      number=6, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -80,8 +87,8 @@ _EVENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15,
-  serialized_end=124,
+  serialized_start=16,
+  serialized_end=146,
 )
 
 DESCRIPTOR.message_types_by_name['Event'] = _EVENT

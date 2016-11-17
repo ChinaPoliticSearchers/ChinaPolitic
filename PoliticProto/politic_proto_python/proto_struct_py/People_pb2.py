@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='People.proto',
   package='',
   syntax='proto2',
-  serialized_pb=_b('\n\x0cPeople.proto\"\xad\x03\n\x14\x43haracterInformation\x12\x13\n\x0bnativeplace\x18\x01 \x02(\t\x12\x16\n\x0e\x61ncestral_home\x18\x02 \x02(\t\x12\x0f\n\x07\x64iploma\x18\x03 \x02(\t\x12,\n\x06nation\x18\x04 \x02(\x0e\x32\x1c.CharacterInformation.Nation\x12&\n\x03sex\x18\x05 \x02(\x0e\x32\x19.CharacterInformation.Sex\x12\x11\n\tnicknames\x18\x06 \x03(\t\x12\x30\n\x08religion\x18\x07 \x03(\x0e\x32\x1e.CharacterInformation.Religion\"\x1a\n\x06Nation\x12\x07\n\x03Han\x10\x00\x12\x07\n\x03Hui\x10\x01\"6\n\x03Sex\x12\x08\n\x04Male\x10\x01\x12\n\n\x06\x46\x65Male\x10\x02\x12\x0b\n\x07Unknonw\x10\x03\x12\x0c\n\x08Undefine\x10\x04\"h\n\x08Religion\x12\x10\n\x0c\x43hristianity\x10\x00\x12\t\n\x05Islam\x10\x01\x12\x0e\n\nIrreligion\x10\x02\x12\x0c\n\x08Hinduism\x10\x03\x12\x0c\n\x08\x42uddhism\x10\x04\x12\x13\n\x0fOther_religions\x10\x05\"\xff\x01\n\x06People\x12\x11\n\tpeople_id\x18\x01 \x02(\x03\x12\x0c\n\x04name\x18\x02 \x02(\t\x12*\n\x0binformation\x18\x03 \x02(\x0b\x32\x15.CharacterInformation\x12\x11\n\tevents_id\x18\x04 \x03(\x03\x12\x1e\n\x16\x62lood_relationships_id\x18\x05 \x03(\x03\x12\x17\n\x0frelationship_id\x18\x06 \x03(\x03\x12\x17\n\x0forganzations_id\x18\x07 \x03(\x03\x12\x11\n\tjudges_id\x18\x08 \x03(\x03\x12\x15\n\rjob_titles_id\x18\t \x03(\x03\x12\x19\n\x11politic_trends_id\x18\n \x03(\x03')
+  serialized_pb=_b('\n\x0cPeople.proto\"\xad\x03\n\x14\x43haracterInformation\x12\x13\n\x0bnativeplace\x18\x01 \x02(\t\x12\x16\n\x0e\x61ncestral_home\x18\x02 \x02(\t\x12\x0f\n\x07\x64iploma\x18\x03 \x02(\t\x12,\n\x06nation\x18\x04 \x02(\x0e\x32\x1c.CharacterInformation.Nation\x12&\n\x03sex\x18\x05 \x02(\x0e\x32\x19.CharacterInformation.Sex\x12\x11\n\tnicknames\x18\x06 \x03(\t\x12\x30\n\x08religion\x18\x07 \x03(\x0e\x32\x1e.CharacterInformation.Religion\"\x1a\n\x06Nation\x12\x07\n\x03Han\x10\x00\x12\x07\n\x03Hui\x10\x01\"6\n\x03Sex\x12\x08\n\x04Male\x10\x01\x12\n\n\x06\x46\x65Male\x10\x02\x12\x0b\n\x07Unknonw\x10\x03\x12\x0c\n\x08Undefine\x10\x04\"h\n\x08Religion\x12\x10\n\x0c\x43hristianity\x10\x00\x12\t\n\x05Islam\x10\x01\x12\x0e\n\nIrreligion\x10\x02\x12\x0c\n\x08Hinduism\x10\x03\x12\x0c\n\x08\x42uddhism\x10\x04\x12\x13\n\x0fOther_religions\x10\x05\"\xff\x01\n\x06People\x12\x11\n\tpeople_id\x18\x01 \x02(\t\x12\x0c\n\x04name\x18\x02 \x02(\t\x12*\n\x0binformation\x18\x03 \x02(\x0b\x32\x15.CharacterInformation\x12\x11\n\tevents_id\x18\x04 \x03(\t\x12\x1e\n\x16\x62lood_relationships_id\x18\x05 \x03(\t\x12\x17\n\x0frelationship_id\x18\x06 \x03(\t\x12\x17\n\x0forganzations_id\x18\x07 \x03(\t\x12\x11\n\tjudges_id\x18\x08 \x03(\t\x12\x15\n\rjob_titles_id\x18\t \x03(\t\x12\x19\n\x11politic_trends_id\x18\n \x03(\t')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -201,8 +201,8 @@ _PEOPLE = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='people_id', full_name='People.people_id', index=0,
-      number=1, type=3, cpp_type=2, label=2,
-      has_default_value=False, default_value=0,
+      number=1, type=9, cpp_type=9, label=2,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -222,49 +222,49 @@ _PEOPLE = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='events_id', full_name='People.events_id', index=3,
-      number=4, type=3, cpp_type=2, label=3,
+      number=4, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='blood_relationships_id', full_name='People.blood_relationships_id', index=4,
-      number=5, type=3, cpp_type=2, label=3,
+      number=5, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='relationship_id', full_name='People.relationship_id', index=5,
-      number=6, type=3, cpp_type=2, label=3,
+      number=6, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='organzations_id', full_name='People.organzations_id', index=6,
-      number=7, type=3, cpp_type=2, label=3,
+      number=7, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='judges_id', full_name='People.judges_id', index=7,
-      number=8, type=3, cpp_type=2, label=3,
+      number=8, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='job_titles_id', full_name='People.job_titles_id', index=8,
-      number=9, type=3, cpp_type=2, label=3,
+      number=9, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='politic_trends_id', full_name='People.politic_trends_id', index=9,
-      number=10, type=3, cpp_type=2, label=3,
+      number=10, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,

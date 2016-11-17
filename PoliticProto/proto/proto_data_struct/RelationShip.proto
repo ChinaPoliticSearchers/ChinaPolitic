@@ -24,7 +24,7 @@ message RelationShip{
     }
 
     required RelationShipType type=1;
-    map<int64 , Role> roles=2;
-    repeated  int64 event_id=3;
-    repeated  int64 origins_id=4;
+    map<string , Role> roles=2;
+    repeated  string event_id=3;
+    repeated  string origins_id=4;
 }

@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='RelationShip.proto',
   package='',
   syntax='proto2',
-  serialized_pb=_b('\n\x12RelationShip.proto\"\xd7\x03\n\x0cRelationShip\x12,\n\x04type\x18\x01 \x02(\x0e\x32\x1e.RelationShip.RelationShipType\x12\'\n\x05roles\x18\x02 \x03(\x0b\x32\x18.RelationShip.RolesEntry\x12\x10\n\x08\x65vent_id\x18\x03 \x03(\x03\x12\x12\n\norigins_id\x18\x04 \x03(\x03\x1a@\n\nRolesEntry\x12\x0b\n\x03key\x18\x01 \x01(\x03\x12!\n\x05value\x18\x02 \x01(\x0e\x32\x12.RelationShip.Role:\x02\x38\x01\"z\n\x10RelationShipType\x12\x0c\n\x08OtherRel\x10\x00\x12\x12\n\x0e\x44irectRelative\x10\x01\x12\x10\n\x0c\x42ussinessRel\x10\x02\x12\x10\n\x0c\x43lassMateRel\x10\x03\x12\x0e\n\nComradeRel\x10\x04\x12\x10\n\x0c\x43olleagueRel\x10\x05\"\x8b\x01\n\x04Role\x12\t\n\x05Other\x10\x00\x12\x0b\n\x07Parents\x10\x01\x12\x0c\n\x08\x43hildren\x10\x02\x12\r\n\tOfficials\x10\x03\x12\x10\n\x0c\x42ussinessMan\x10\x04\x12\r\n\tClassMate\x10\x05\x12\x0f\n\x0b\x43omradeship\x10\x06\x12\r\n\tColleague\x10\x07\x12\r\n\tSecretary\x10\x08')
+  serialized_pb=_b('\n\x12RelationShip.proto\"\xd7\x03\n\x0cRelationShip\x12,\n\x04type\x18\x01 \x02(\x0e\x32\x1e.RelationShip.RelationShipType\x12\'\n\x05roles\x18\x02 \x03(\x0b\x32\x18.RelationShip.RolesEntry\x12\x10\n\x08\x65vent_id\x18\x03 \x03(\t\x12\x12\n\norigins_id\x18\x04 \x03(\t\x1a@\n\nRolesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12!\n\x05value\x18\x02 \x01(\x0e\x32\x12.RelationShip.Role:\x02\x38\x01\"z\n\x10RelationShipType\x12\x0c\n\x08OtherRel\x10\x00\x12\x12\n\x0e\x44irectRelative\x10\x01\x12\x10\n\x0c\x42ussinessRel\x10\x02\x12\x10\n\x0c\x43lassMateRel\x10\x03\x12\x0e\n\nComradeRel\x10\x04\x12\x10\n\x0c\x43olleagueRel\x10\x05\"\x8b\x01\n\x04Role\x12\t\n\x05Other\x10\x00\x12\x0b\n\x07Parents\x10\x01\x12\x0c\n\x08\x43hildren\x10\x02\x12\r\n\tOfficials\x10\x03\x12\x10\n\x0c\x42ussinessMan\x10\x04\x12\r\n\tClassMate\x10\x05\x12\x0f\n\x0b\x43omradeship\x10\x06\x12\r\n\tColleague\x10\x07\x12\r\n\tSecretary\x10\x08')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -123,8 +123,8 @@ _RELATIONSHIP_ROLESENTRY = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='key', full_name='RelationShip.RolesEntry.key', index=0,
-      number=1, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -174,14 +174,14 @@ _RELATIONSHIP = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='event_id', full_name='RelationShip.event_id', index=2,
-      number=3, type=3, cpp_type=2, label=3,
+      number=3, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='origins_id', full_name='RelationShip.origins_id', index=3,
-      number=4, type=3, cpp_type=2, label=3,
+      number=4, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,

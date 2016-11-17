@@ -33,16 +33,16 @@ message CharacterInformation
 
 message People
 {
-   required int64  people_id=1;
+   required string  people_id=1;
    required string name=2;
    required  CharacterInformation information=3;
-   repeated int64  events_id=4;
-   repeated int64  blood_relationships_id=5;
-   repeated int64  relationship_id=6;
-   repeated int64  organzations_id=7;
-   repeated int64  judges_id=8;
-   repeated int64  job_titles_id=9;
-   repeated int64  politic_trends_id=10;
+   repeated string  events_id=4;
+   repeated string  blood_relationships_id=5;
+   repeated string  relationship_id=6;
+   repeated string  organzations_id=7;
+   repeated string  judges_id=8;
+   repeated string  job_titles_id=9;
+   repeated string  politic_trends_id=10;
 }
 
 

@@ -2,5 +2,7 @@ syntax = "proto2";
 
 message Source{
    repeated string links=1;
+   required  string organization_id=2;
+   repeated  string connections_id=3;
 }
 
