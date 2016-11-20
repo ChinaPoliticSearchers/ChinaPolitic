@@ -2,4 +2,4 @@
 .virtualenv/
 mac_env/*
 *.pyc
-
+linux/*

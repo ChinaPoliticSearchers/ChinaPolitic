@@ -1,6 +1,7 @@
 protobuf
 grpc
 scrapy
+scrapy-redis
 grpcio
 grpcio-tools
 pyMongo

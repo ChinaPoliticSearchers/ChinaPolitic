@@ -1,3 +1,4 @@
 scrapy==1.2.1
+scrapy-redis
 grpcio=1.0.1
 politic_proto_python=0.0.1

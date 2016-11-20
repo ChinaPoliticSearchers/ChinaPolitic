@@ -1,9 +1,9 @@
 syntax = "proto2";
 message GenerateIdRequest{
-    required  string generateIdType=1;
-    required  string generateTypeObject=2;
-    required  string source=3;
-    required  string links=4;
+    required  string generateObjectType=1;
+    required  string generateObjectByte=2;
+    optional  string source=3;
+    repeated  string links=4;
 
 }
 

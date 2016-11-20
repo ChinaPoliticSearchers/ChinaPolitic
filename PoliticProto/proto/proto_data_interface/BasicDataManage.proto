@@ -35,6 +35,7 @@ message DataResponse{
 enum InsertOptional{
     auto_increment=0;
     override=1;
+    generate_id=2;
 }
 
 message InsertData{

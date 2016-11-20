@@ -1,14 +1,16 @@
 # coding=utf-8
+import six
+
 from scrapy import Field
 from scrapy import Item
+from scrapy.item import ItemMeta, DictItem
+
+from common_tools.reflection import reflection_tools
 
 
-class PoliticItem(Item):
-    event = Field()
-    job_title = Field()
-    judge = Field()
-    organization = Field()
-    people = Field()
-    Relationship = Field()
-    source = Field()
-
+@six.add_metaclass(ItemMeta)
+class PoliticItem(DictItem):
+    def __init__(self):
+        for name in reflection_tools.data_class_name:
+            self._values = {}
+            self.fields[name] = Field()

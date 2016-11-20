@@ -1,23 +1,27 @@
-from scrapy import signals
+import logging
 
-from scrapy.pipelines.files import FilesPipeline
-from proto_data_interface_py.BasicDataManage_pb2 import BetaDataServiceStub
+import sys
 
-
+from proto_data_interface_py.BasicDataManage_pb2 import InsertData, DataServiceStub, InsertOptional
 
 
 class DataManagePipeline(object):
     def __init__(self):
         pass
 
-    def check_items(self, item):
+    @staticmethod
+    def check_items(self, typename, item):
         pass
 
+    @staticmethod
+    def insert_items(typename, politic_obj):
+        insert_data = InsertData(insert_type_name=typename, insert_bytes=politic_obj.SerializeToString(),
+                                 insert_optionals=[InsertOptional.Value("generate_id")])
+        data_response = DataServiceStub.Insert(insert_data)
+        if not data_response.success:
+            logging.error("insert database error")
+            sys.exit(0)
 
-    def insert_items(self,typename,item):
-        BetaDataServiceStub.Insert()
-
-    def process_item(self, item, spider):
-        self.check_items(item)
-        print(item)
-        return item
+    def process_item(self, politic_item, spider):
+        for filed_name in politic_item.fields:
+            self.insert_items(filed_name, politic_item[filed_name])
