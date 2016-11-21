@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='IdGenerate.proto',
   package='',
   syntax='proto2',
-  serialized_pb=_b('\n\x10IdGenerate.proto\"f\n\x11GenerateIdRequest\x12\x16\n\x0egenerateIdType\x18\x01 \x02(\t\x12\x1a\n\x12generateTypeObject\x18\x02 \x02(\t\x12\x0e\n\x06source\x18\x03 \x02(\t\x12\r\n\x05links\x18\x04 \x02(\t\"A\n\x12GenerateIdResponse\x12\x0f\n\x07success\x18\x01 \x02(\x08\x12\n\n\x02id\x18\x02 \x02(\x03\x12\x0e\n\x06\x65xists\x18\x03 \x01(\x08\x32\x44\n\x0bId_Generate\x12\x35\n\nGenerateId\x12\x12.GenerateIdRequest\x1a\x13.GenerateIdResponse')
+  serialized_pb=_b('\n\x10IdGenerate.proto\"j\n\x11GenerateIdRequest\x12\x1a\n\x12generateObjectType\x18\x01 \x02(\t\x12\x1a\n\x12generateObjectByte\x18\x02 \x02(\t\x12\x0e\n\x06source\x18\x03 \x01(\t\x12\r\n\x05links\x18\x04 \x03(\t\"A\n\x12GenerateIdResponse\x12\x0f\n\x07success\x18\x01 \x02(\x08\x12\n\n\x02id\x18\x02 \x02(\x03\x12\x0e\n\x06\x65xists\x18\x03 \x01(\x08\x32\x44\n\x0bId_Generate\x12\x35\n\nGenerateId\x12\x12.GenerateIdRequest\x1a\x13.GenerateIdResponse')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -34,14 +34,14 @@ _GENERATEIDREQUEST = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='generateIdType', full_name='GenerateIdRequest.generateIdType', index=0,
+      name='generateObjectType', full_name='GenerateIdRequest.generateObjectType', index=0,
       number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='generateTypeObject', full_name='GenerateIdRequest.generateTypeObject', index=1,
+      name='generateObjectByte', full_name='GenerateIdRequest.generateObjectByte', index=1,
       number=2, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -49,15 +49,15 @@ _GENERATEIDREQUEST = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='source', full_name='GenerateIdRequest.source', index=2,
-      number=3, type=9, cpp_type=9, label=2,
+      number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='links', full_name='GenerateIdRequest.links', index=3,
-      number=4, type=9, cpp_type=9, label=2,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      number=4, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -74,7 +74,7 @@ _GENERATEIDREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=20,
-  serialized_end=122,
+  serialized_end=126,
 )
 
 
@@ -118,8 +118,8 @@ _GENERATEIDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=124,
-  serialized_end=189,
+  serialized_start=128,
+  serialized_end=193,
 )
 
 DESCRIPTOR.message_types_by_name['GenerateIdRequest'] = _GENERATEIDREQUEST

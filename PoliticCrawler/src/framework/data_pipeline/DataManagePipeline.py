@@ -23,5 +23,6 @@ class DataManagePipeline(object):
             sys.exit(0)
 
     def process_item(self, politic_item, spider):
-        for filed_name in politic_item.fields:
-            self.insert_items(filed_name, politic_item[filed_name])
+        for field_name in politic_item.fields:
+            if field_name in politic_item.keys():
+                self.insert_items(field_name, politic_item[field_name])
