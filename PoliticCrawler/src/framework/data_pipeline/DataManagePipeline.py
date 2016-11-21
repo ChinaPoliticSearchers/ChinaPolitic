@@ -11,7 +11,9 @@ class DataManagePipeline(object):
 
     @staticmethod
     def check_items(self, typename, item):
-        pass
+        if item.__class__.__base__.__name__  != "Message":
+            return False
+        return True
 
     @staticmethod
     def insert_items(typename, politic_obj):
@@ -25,4 +27,7 @@ class DataManagePipeline(object):
     def process_item(self, politic_item, spider):
         for field_name in politic_item.fields:
             if field_name in politic_item.keys():
+                if not self.check_items(politic_item[field_name]):
+                    print("item is not qualified")
+                    sys.exit(0)
                 self.insert_items(field_name, politic_item[field_name])

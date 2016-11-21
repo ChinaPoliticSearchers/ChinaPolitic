@@ -7,7 +7,11 @@ from website.wikipedia.WikipediaCrawler import WikipediaSpider
 
 
 def start_wikipedia_crawler():
+    # type: () -> object
     configure_logging({'LOG_FORMAT': '%(levelname)s: %(message)s'})
     process = CrawlerProcess(get_project_settings())
     process.crawl(WikipediaSpider)
     process.start()
+
+
+start_wikipedia_crawler()

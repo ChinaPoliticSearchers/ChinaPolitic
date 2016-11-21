@@ -5,3 +5,5 @@ DOWNLOADER_MIDDLEWARES = {'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddl
 SCHEDULER_MIDDLEWARES = ["scrapy_redis.scheduler.Scheduler"]
 REDIS_HOST = 'localhost'
 REDIS_PORT = '6379'
+SCHEDULER_DISK_QUEUE = 'scrapy.squeues.PickleFifoDiskQueue'
+SCHEDULER_MEMORY_QUEUE = 'scrapy.squeues.FifoMemoryQueue'
