@@ -1,6 +1,6 @@
 # coding=utf-8
 # do bytes dynamic
-from common_tools.reflection.reflection_tools import is_data_name_acceptable, get_instant_object
+from common_tools.reflection.data_reflection_tools import is_data_name_acceptable, get_instant_object
 from proto_data_interface_py.BasicDataManage_pb2 import InsertData, DataResponse, Error, Level, DataServiceServicer
 from google.protobuf.json_format import MessageToJson
 from logging import Logger
