@@ -17,12 +17,12 @@ HTTP_PROXY = "http://localhost:1081"
 
 
 class BaseWikipediaCrawler(object):
-    @abc.abstractmethod
-    def get_parse_type(self):
+    @staticmethod
+    def get_parse_type():
         pass
 
-    @abc.abstractmethod
-    def parse(self, response, spider):
+    @staticmethod
+    def parse(response, spider):
         pass
 
 
@@ -36,15 +36,22 @@ class WikipediaSpider(scrapy.Spider):
         request.meta['proxy'] = HTTP_PROXY
         return request
 
-    def parse_by_types(self, response):
+    def parse_by_types(self, type, response):
         parent_name = __name__
-        parent_name.replace(".WikipediaCrawler")
-        parent_module_name = parent_name + ".TypeCrawler"
-        file_names = os.listdir(os.path.join(os.path.dirname(__file__), "TypeCrawler"))
-        crawler_type_modules = map(lambda file_name: importlib.import_module(parent_module_name + "." + file_name),
-                                   file_names)
-        crawler_type_module = crawler_type_modules[0]
-        inspect.getmodule(crawler_type_module, inspect.isclass)
+        parent_module_name = parent_name.replace(".WikipediaCrawler", "") + ".TypeCrawler"
+        file_names = filter(lambda name: name != '__init__.py',
+                            os.listdir(os.path.join(os.path.dirname(__file__), "TypeCrawler")))
+        crawler_type_modules = map(
+            lambda file_name: importlib.import_module(parent_module_name + "." + file_name.replace(".py", "")),
+            file_names)
+        crawler_type_modules = map(lambda crawler_type_module: inspect.getmembers(crawler_type_module, inspect.isclass),
+                                   crawler_type_modules)
+        crawler_type_classes = filter(lambda crawl_type_class: crawl_type_class.__base__ == BaseWikipediaCrawler,
+                                      map(lambda crawler_type_module: crawler_type_module[1],
+                                          reduce(lambda x, y: x + y, crawler_type_modules)))
+        crawler_type_classes_map = {crawler_type_class.get_parse_type(): crawler_type_class for crawler_type_class
+                                    in crawler_type_classes}
+        crawler_type_classes_map.get(type).parse(response,None)
 
     def parse(self, response):
-        self.parse_by_types(response)
+        self.parse_by_types("People", response)

@@ -3,8 +3,12 @@ from website.wikipedia.WikipediaCrawler import BaseWikipediaCrawler
 
 
 class PeopleCrawler(BaseWikipediaCrawler):
-    def parse(self, response):
+    @staticmethod
+    def parse(response, spider):
+        web_text=response.xpath("//text()").extract()
+        print("pretented i am invoke")
         return None
 
-    def get_parse_type(self):
+    @staticmethod
+    def get_parse_type():
         return "People"
