@@ -1,5 +1,6 @@
 # coding=utf-8
 import abc
+import hashlib
 import threading
 import time
 import unittest
@@ -38,7 +39,7 @@ class BASIC_DATA_TEST(unittest.TestCase):
         self.data_stub = BasicDataManage_pb2.DataServiceStub(channel)
 
     def test_insertData(self):
-        event = Event_pb2.Event(event_id=-1, event_name="fuck you")
+        event = Event_pb2.Event(event_id=hashlib.md5("test fuck").hexdigest(), event_name="fuck you")
         response = self.data_stub.Insert(
             BasicDataManage_pb2.InsertData(insert_type_name='Event', insert_bytes=event.SerializeToString(),
                                            insert_optionals=[
