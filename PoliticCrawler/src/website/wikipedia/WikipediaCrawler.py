@@ -7,7 +7,7 @@ from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import get_project_settings
 import inspect
 
-from common_tools.reflection import common_reflections
+from common_tools.reflection import reflections_tools
 
 process = CrawlerProcess(get_project_settings())
 
@@ -29,7 +29,7 @@ class BaseWikipediaCrawler(object):
 
 
 def parse_by_types(parse_type, response):
-    crawler_type_classes = common_reflections.get_module_all_classes("website.wikipedia.TypeCrawler", lambda
+    crawler_type_classes = reflections_tools.get_module_all_classes("website.wikipedia.TypeCrawler", lambda
         single_class: single_class.__base__ == BaseWikipediaCrawler)
     crawler_type_classes_map = {crawler_type_class().get_parse_type(): crawler_type_class for crawler_type_class
                                 in crawler_type_classes}
@@ -39,7 +39,7 @@ def parse_by_types(parse_type, response):
 class WikipediaSpider(scrapy.Spider):
     name = "wikipedia"
     # allowed_domains = ["www.wikipedia.com"]
-    start_urls = ["file:///home/friddle/hello.html"]
+    start_urls = ["file:///home/friddle/temp/jiangzemin.html"]
 
     def make_requests_from_url(self, url):
         request = Request(url=url)

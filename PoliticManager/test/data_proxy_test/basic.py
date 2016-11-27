@@ -8,6 +8,7 @@ import unittest
 import grpc
 from concurrent import futures
 
+from data_proxy.mongodb.mongo_proxy import MongoDataManage
 from proto_data_interface_py import BasicDataManage_pb2
 from proto_struct_py import Event_pb2
 
@@ -49,7 +50,10 @@ class BASIC_DATA_TEST(unittest.TestCase):
         if response.success is False:
             print(response.error.message)
 
+    def test_insert_locallly(self):
+        event = Event_pb2.Event(event_id=hashlib.md5("test fuck").hexdigest(), event_name="fuck you")
+        mongodb = MongoDataManage()
+        mongodb.Insert(event, None)
+
     def tearDown(self):
         self.stop = True
-
-
