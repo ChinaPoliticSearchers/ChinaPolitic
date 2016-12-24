@@ -35,6 +35,7 @@ message DataResponse{
 enum InsertOptional{
     auto_increment=0;
     override=1;
+    //让提供接口方自己生成id,默认的ObjectId应该选择-1
     generate_id=2;
 }
 

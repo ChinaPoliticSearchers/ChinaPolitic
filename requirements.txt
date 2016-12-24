@@ -2,6 +2,8 @@ protobuf
 grpc
 scrapy
 scrapy-redis
+simplejson
 grpcio
 grpcio-tools
 pyMongo
+jieba

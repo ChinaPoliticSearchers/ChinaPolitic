@@ -17,7 +17,7 @@ class MongoDataManage(BasicDataManage):
         self.politic_db = self.mongo_client["politic_db"]  # 建库
 
     def set_post_id(self, data_obj):
-        data_obj=simplejson.load({'ddd':'test'})
+        data_obj = simplejson.load({'ddd': 'test'})
 
     def save_detail(self, type_name, to_save_object, insert_optionals):
         db_names = self.politic_db.collection_names()

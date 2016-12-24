@@ -23,6 +23,3 @@ def get_module_all_classes(modules_name, filter_func=None):
     return type_classes
 
 
-classes = get_module_all_classes("proto_struct_py", lambda single_class: single_class.__base__ == Message)
-# classes = get_module_all_classes("proto_struct_py")
-print(classes)
