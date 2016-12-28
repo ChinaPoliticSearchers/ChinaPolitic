@@ -4,7 +4,6 @@ import six
 from scrapy import Field
 from scrapy import Item
 from scrapy.item import ItemMeta, DictItem
-
 from common_tools.reflection import struct_reflection
 
 

@@ -449,182 +449,187 @@ UpdateData = _reflection.GeneratedProtocolMessageType('UpdateData', (_message.Me
 _sym_db.RegisterMessage(UpdateData)
 
 
-import grpc
-from grpc.beta import implementations as beta_implementations
-from grpc.beta import interfaces as beta_interfaces
-from grpc.framework.common import cardinality
-from grpc.framework.interfaces.face import utilities as face_utilities
+try:
+  # THESE ELEMENTS WILL BE DEPRECATED.
+  # Please use the generated *_pb2_grpc.py files instead.
+  import grpc
+  from grpc.framework.common import cardinality
+  from grpc.framework.interfaces.face import utilities as face_utilities
+  from grpc.beta import implementations as beta_implementations
+  from grpc.beta import interfaces as beta_interfaces
 
 
-class DataServiceStub(object):
+  class DataServiceStub(object):
 
-  def __init__(self, channel):
-    """Constructor.
+    def __init__(self, channel):
+      """Constructor.
 
-    Args:
-      channel: A grpc.Channel.
-    """
-    self.Insert = channel.unary_unary(
-        '/DataService/Insert',
-        request_serializer=InsertData.SerializeToString,
-        response_deserializer=DataResponse.FromString,
-        )
-    self.Query = channel.unary_unary(
-        '/DataService/Query',
-        request_serializer=QueryData.SerializeToString,
-        response_deserializer=DataResponse.FromString,
-        )
-    self.Delete = channel.unary_unary(
-        '/DataService/Delete',
-        request_serializer=QueryData.SerializeToString,
-        response_deserializer=DataResponse.FromString,
-        )
-    self.Update = channel.unary_unary(
-        '/DataService/Update',
-        request_serializer=UpdateData.SerializeToString,
-        response_deserializer=DataResponse.FromString,
-        )
-
-
-class DataServiceServicer(object):
-
-  def Insert(self, request, context):
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-  def Query(self, request, context):
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-  def Delete(self, request, context):
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-  def Update(self, request, context):
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
+      Args:
+        channel: A grpc.Channel.
+      """
+      self.Insert = channel.unary_unary(
+          '/DataService/Insert',
+          request_serializer=InsertData.SerializeToString,
+          response_deserializer=DataResponse.FromString,
+          )
+      self.Query = channel.unary_unary(
+          '/DataService/Query',
+          request_serializer=QueryData.SerializeToString,
+          response_deserializer=DataResponse.FromString,
+          )
+      self.Delete = channel.unary_unary(
+          '/DataService/Delete',
+          request_serializer=QueryData.SerializeToString,
+          response_deserializer=DataResponse.FromString,
+          )
+      self.Update = channel.unary_unary(
+          '/DataService/Update',
+          request_serializer=UpdateData.SerializeToString,
+          response_deserializer=DataResponse.FromString,
+          )
 
 
-def add_DataServiceServicer_to_server(servicer, server):
-  rpc_method_handlers = {
-      'Insert': grpc.unary_unary_rpc_method_handler(
-          servicer.Insert,
-          request_deserializer=InsertData.FromString,
-          response_serializer=DataResponse.SerializeToString,
-      ),
-      'Query': grpc.unary_unary_rpc_method_handler(
-          servicer.Query,
-          request_deserializer=QueryData.FromString,
-          response_serializer=DataResponse.SerializeToString,
-      ),
-      'Delete': grpc.unary_unary_rpc_method_handler(
-          servicer.Delete,
-          request_deserializer=QueryData.FromString,
-          response_serializer=DataResponse.SerializeToString,
-      ),
-      'Update': grpc.unary_unary_rpc_method_handler(
-          servicer.Update,
-          request_deserializer=UpdateData.FromString,
-          response_serializer=DataResponse.SerializeToString,
-      ),
-  }
-  generic_handler = grpc.method_handlers_generic_handler(
-      'DataService', rpc_method_handlers)
-  server.add_generic_rpc_handlers((generic_handler,))
+  class DataServiceServicer(object):
+
+    def Insert(self, request, context):
+      context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+      context.set_details('Method not implemented!')
+      raise NotImplementedError('Method not implemented!')
+
+    def Query(self, request, context):
+      context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+      context.set_details('Method not implemented!')
+      raise NotImplementedError('Method not implemented!')
+
+    def Delete(self, request, context):
+      context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+      context.set_details('Method not implemented!')
+      raise NotImplementedError('Method not implemented!')
+
+    def Update(self, request, context):
+      context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+      context.set_details('Method not implemented!')
+      raise NotImplementedError('Method not implemented!')
 
 
-class BetaDataServiceServicer(object):
-  """The Beta API is deprecated for 0.15.0 and later.
-
-  It is recommended to use the GA API (classes and functions in this
-  file not marked beta) for all further purposes. This class was generated
-  only to ease transition from grpcio<0.15.0 to grpcio>=0.15.0."""
-  def Insert(self, request, context):
-    context.code(beta_interfaces.StatusCode.UNIMPLEMENTED)
-  def Query(self, request, context):
-    context.code(beta_interfaces.StatusCode.UNIMPLEMENTED)
-  def Delete(self, request, context):
-    context.code(beta_interfaces.StatusCode.UNIMPLEMENTED)
-  def Update(self, request, context):
-    context.code(beta_interfaces.StatusCode.UNIMPLEMENTED)
-
-
-class BetaDataServiceStub(object):
-  """The Beta API is deprecated for 0.15.0 and later.
-
-  It is recommended to use the GA API (classes and functions in this
-  file not marked beta) for all further purposes. This class was generated
-  only to ease transition from grpcio<0.15.0 to grpcio>=0.15.0."""
-  def Insert(self, request, timeout, metadata=None, with_call=False, protocol_options=None):
-    raise NotImplementedError()
-  Insert.future = None
-  def Query(self, request, timeout, metadata=None, with_call=False, protocol_options=None):
-    raise NotImplementedError()
-  Query.future = None
-  def Delete(self, request, timeout, metadata=None, with_call=False, protocol_options=None):
-    raise NotImplementedError()
-  Delete.future = None
-  def Update(self, request, timeout, metadata=None, with_call=False, protocol_options=None):
-    raise NotImplementedError()
-  Update.future = None
+  def add_DataServiceServicer_to_server(servicer, server):
+    rpc_method_handlers = {
+        'Insert': grpc.unary_unary_rpc_method_handler(
+            servicer.Insert,
+            request_deserializer=InsertData.FromString,
+            response_serializer=DataResponse.SerializeToString,
+        ),
+        'Query': grpc.unary_unary_rpc_method_handler(
+            servicer.Query,
+            request_deserializer=QueryData.FromString,
+            response_serializer=DataResponse.SerializeToString,
+        ),
+        'Delete': grpc.unary_unary_rpc_method_handler(
+            servicer.Delete,
+            request_deserializer=QueryData.FromString,
+            response_serializer=DataResponse.SerializeToString,
+        ),
+        'Update': grpc.unary_unary_rpc_method_handler(
+            servicer.Update,
+            request_deserializer=UpdateData.FromString,
+            response_serializer=DataResponse.SerializeToString,
+        ),
+    }
+    generic_handler = grpc.method_handlers_generic_handler(
+        'DataService', rpc_method_handlers)
+    server.add_generic_rpc_handlers((generic_handler,))
 
 
-def beta_create_DataService_server(servicer, pool=None, pool_size=None, default_timeout=None, maximum_timeout=None):
-  """The Beta API is deprecated for 0.15.0 and later.
+  class BetaDataServiceServicer(object):
+    """The Beta API is deprecated for 0.15.0 and later.
 
-  It is recommended to use the GA API (classes and functions in this
-  file not marked beta) for all further purposes. This function was
-  generated only to ease transition from grpcio<0.15.0 to grpcio>=0.15.0"""
-  request_deserializers = {
-    ('DataService', 'Delete'): QueryData.FromString,
-    ('DataService', 'Insert'): InsertData.FromString,
-    ('DataService', 'Query'): QueryData.FromString,
-    ('DataService', 'Update'): UpdateData.FromString,
-  }
-  response_serializers = {
-    ('DataService', 'Delete'): DataResponse.SerializeToString,
-    ('DataService', 'Insert'): DataResponse.SerializeToString,
-    ('DataService', 'Query'): DataResponse.SerializeToString,
-    ('DataService', 'Update'): DataResponse.SerializeToString,
-  }
-  method_implementations = {
-    ('DataService', 'Delete'): face_utilities.unary_unary_inline(servicer.Delete),
-    ('DataService', 'Insert'): face_utilities.unary_unary_inline(servicer.Insert),
-    ('DataService', 'Query'): face_utilities.unary_unary_inline(servicer.Query),
-    ('DataService', 'Update'): face_utilities.unary_unary_inline(servicer.Update),
-  }
-  server_options = beta_implementations.server_options(request_deserializers=request_deserializers, response_serializers=response_serializers, thread_pool=pool, thread_pool_size=pool_size, default_timeout=default_timeout, maximum_timeout=maximum_timeout)
-  return beta_implementations.server(method_implementations, options=server_options)
+    It is recommended to use the GA API (classes and functions in this
+    file not marked beta) for all further purposes. This class was generated
+    only to ease transition from grpcio<0.15.0 to grpcio>=0.15.0."""
+    def Insert(self, request, context):
+      context.code(beta_interfaces.StatusCode.UNIMPLEMENTED)
+    def Query(self, request, context):
+      context.code(beta_interfaces.StatusCode.UNIMPLEMENTED)
+    def Delete(self, request, context):
+      context.code(beta_interfaces.StatusCode.UNIMPLEMENTED)
+    def Update(self, request, context):
+      context.code(beta_interfaces.StatusCode.UNIMPLEMENTED)
 
 
-def beta_create_DataService_stub(channel, host=None, metadata_transformer=None, pool=None, pool_size=None):
-  """The Beta API is deprecated for 0.15.0 and later.
+  class BetaDataServiceStub(object):
+    """The Beta API is deprecated for 0.15.0 and later.
 
-  It is recommended to use the GA API (classes and functions in this
-  file not marked beta) for all further purposes. This function was
-  generated only to ease transition from grpcio<0.15.0 to grpcio>=0.15.0"""
-  request_serializers = {
-    ('DataService', 'Delete'): QueryData.SerializeToString,
-    ('DataService', 'Insert'): InsertData.SerializeToString,
-    ('DataService', 'Query'): QueryData.SerializeToString,
-    ('DataService', 'Update'): UpdateData.SerializeToString,
-  }
-  response_deserializers = {
-    ('DataService', 'Delete'): DataResponse.FromString,
-    ('DataService', 'Insert'): DataResponse.FromString,
-    ('DataService', 'Query'): DataResponse.FromString,
-    ('DataService', 'Update'): DataResponse.FromString,
-  }
-  cardinalities = {
-    'Delete': cardinality.Cardinality.UNARY_UNARY,
-    'Insert': cardinality.Cardinality.UNARY_UNARY,
-    'Query': cardinality.Cardinality.UNARY_UNARY,
-    'Update': cardinality.Cardinality.UNARY_UNARY,
-  }
-  stub_options = beta_implementations.stub_options(host=host, metadata_transformer=metadata_transformer, request_serializers=request_serializers, response_deserializers=response_deserializers, thread_pool=pool, thread_pool_size=pool_size)
-  return beta_implementations.dynamic_stub(channel, 'DataService', cardinalities, options=stub_options)
+    It is recommended to use the GA API (classes and functions in this
+    file not marked beta) for all further purposes. This class was generated
+    only to ease transition from grpcio<0.15.0 to grpcio>=0.15.0."""
+    def Insert(self, request, timeout, metadata=None, with_call=False, protocol_options=None):
+      raise NotImplementedError()
+    Insert.future = None
+    def Query(self, request, timeout, metadata=None, with_call=False, protocol_options=None):
+      raise NotImplementedError()
+    Query.future = None
+    def Delete(self, request, timeout, metadata=None, with_call=False, protocol_options=None):
+      raise NotImplementedError()
+    Delete.future = None
+    def Update(self, request, timeout, metadata=None, with_call=False, protocol_options=None):
+      raise NotImplementedError()
+    Update.future = None
+
+
+  def beta_create_DataService_server(servicer, pool=None, pool_size=None, default_timeout=None, maximum_timeout=None):
+    """The Beta API is deprecated for 0.15.0 and later.
+
+    It is recommended to use the GA API (classes and functions in this
+    file not marked beta) for all further purposes. This function was
+    generated only to ease transition from grpcio<0.15.0 to grpcio>=0.15.0"""
+    request_deserializers = {
+      ('DataService', 'Delete'): QueryData.FromString,
+      ('DataService', 'Insert'): InsertData.FromString,
+      ('DataService', 'Query'): QueryData.FromString,
+      ('DataService', 'Update'): UpdateData.FromString,
+    }
+    response_serializers = {
+      ('DataService', 'Delete'): DataResponse.SerializeToString,
+      ('DataService', 'Insert'): DataResponse.SerializeToString,
+      ('DataService', 'Query'): DataResponse.SerializeToString,
+      ('DataService', 'Update'): DataResponse.SerializeToString,
+    }
+    method_implementations = {
+      ('DataService', 'Delete'): face_utilities.unary_unary_inline(servicer.Delete),
+      ('DataService', 'Insert'): face_utilities.unary_unary_inline(servicer.Insert),
+      ('DataService', 'Query'): face_utilities.unary_unary_inline(servicer.Query),
+      ('DataService', 'Update'): face_utilities.unary_unary_inline(servicer.Update),
+    }
+    server_options = beta_implementations.server_options(request_deserializers=request_deserializers, response_serializers=response_serializers, thread_pool=pool, thread_pool_size=pool_size, default_timeout=default_timeout, maximum_timeout=maximum_timeout)
+    return beta_implementations.server(method_implementations, options=server_options)
+
+
+  def beta_create_DataService_stub(channel, host=None, metadata_transformer=None, pool=None, pool_size=None):
+    """The Beta API is deprecated for 0.15.0 and later.
+
+    It is recommended to use the GA API (classes and functions in this
+    file not marked beta) for all further purposes. This function was
+    generated only to ease transition from grpcio<0.15.0 to grpcio>=0.15.0"""
+    request_serializers = {
+      ('DataService', 'Delete'): QueryData.SerializeToString,
+      ('DataService', 'Insert'): InsertData.SerializeToString,
+      ('DataService', 'Query'): QueryData.SerializeToString,
+      ('DataService', 'Update'): UpdateData.SerializeToString,
+    }
+    response_deserializers = {
+      ('DataService', 'Delete'): DataResponse.FromString,
+      ('DataService', 'Insert'): DataResponse.FromString,
+      ('DataService', 'Query'): DataResponse.FromString,
+      ('DataService', 'Update'): DataResponse.FromString,
+    }
+    cardinalities = {
+      'Delete': cardinality.Cardinality.UNARY_UNARY,
+      'Insert': cardinality.Cardinality.UNARY_UNARY,
+      'Query': cardinality.Cardinality.UNARY_UNARY,
+      'Update': cardinality.Cardinality.UNARY_UNARY,
+    }
+    stub_options = beta_implementations.stub_options(host=host, metadata_transformer=metadata_transformer, request_serializers=request_serializers, response_deserializers=response_deserializers, thread_pool=pool, thread_pool_size=pool_size)
+    return beta_implementations.dynamic_stub(channel, 'DataService', cardinalities, options=stub_options)
+except ImportError:
+  pass
 # @@protoc_insertion_point(module_scope)
